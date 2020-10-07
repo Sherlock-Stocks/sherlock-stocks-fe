@@ -4,8 +4,8 @@ import {
     Route, 
     Switch,
 } from 'react-router-dom';
-import SearchPage from './SearchPage.js';
-import DetailPage from './DetailPage.js';
+import Login from './Authorization/Login.js';
+import Signup from './Authorization/Signup.js';
 
 export default class App extends Component {
     render() {
@@ -16,18 +16,18 @@ export default class App extends Component {
                         <Route 
                             path="/" 
                             exact
-                            render={(routerProps) => <SearchPage {...routerProps} />} 
+                            render={(routerProps) => <Signup {...routerProps} />} 
                         />
                         <Route 
-                            path="/quote" 
+                            path="/login" 
                             exact
-                            render={(routerProps) => <DetailPage {...routerProps} />} 
+                            render={(routerProps) => <Login {...routerProps} />} 
                         />
-                        <Route 
+                        {/* <Route 
                           path="/users/:myId" 
                           exact
-                          render={(routerProps) => <DetailPage {...routerProps} />} 
-                        />
+                          render={(routerProps) => < {...routerProps} />} 
+                        /> */}
                     </Switch>
                 </Router>
             </div>
