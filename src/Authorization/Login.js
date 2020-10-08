@@ -21,7 +21,7 @@ class Login extends React.Component {
     return (
       <div>
         <h2>Login</h2>
-        <form>
+        <form onSubmit={this.handleLogin}>
           <label>
             <h3>Email</h3>
             <input type='email' autoComplete='username' onChange={e => this.setState({ email: e.target.value })} value={this.state.email} required/>
