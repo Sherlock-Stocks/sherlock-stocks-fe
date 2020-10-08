@@ -4,29 +4,32 @@ import {
     Route, 
     Switch,
 } from 'react-router-dom';
-import SearchPage from './SearchPage.js';
-import DetailPage from './DetailPage.js';
+import Login from './Authorization/Login.js';
+import Signup from './Authorization/Signup.js';
+import Home from './Home.js';
+import Header from './Header.js';
 
 export default class App extends Component {
     render() {
         return (
             <div>
                 <Router>
+                    <Header />
                     <Switch>
                         <Route 
                             path="/" 
                             exact
-                            render={(routerProps) => <SearchPage {...routerProps} />} 
+                            render={(routerProps) => <Home {...routerProps} />} 
                         />
                         <Route 
-                            path="/quote" 
+                            path="/signup" 
                             exact
-                            render={(routerProps) => <DetailPage {...routerProps} />} 
+                            render={(routerProps) => <Signup {...routerProps} />} 
                         />
                         <Route 
-                          path="/users/:myId" 
+                          path="/login" 
                           exact
-                          render={(routerProps) => <DetailPage {...routerProps} />} 
+                          render={(routerProps) => <Login {...routerProps} />} 
                         />
                     </Switch>
                 </Router>
