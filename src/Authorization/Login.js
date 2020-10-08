@@ -10,14 +10,10 @@ class Login extends React.Component {
   handleLogin = async (e) => {
     e.preventDefault();
 
-    try {
-      await login({
+    await login({
         email: this.state.email,
         password: this.state.password
-      })
-    } catch (e) {
-      res.status(500).json({ error: e.message });
-    }
+    })
 
     this.props.history.push('/portfolio')
   }

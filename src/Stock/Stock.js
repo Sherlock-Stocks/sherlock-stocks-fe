@@ -16,8 +16,7 @@ class Stock extends React.Component {
   handleNewStock = async(e) => {
     e.preventDefault();
 
-    try {
-      await insertStock({
+    await insertStock({
         stockId: this.state.stockId,
         ticker: this.state.ticker,
         startingAmount: this.state.startingAmount,
@@ -26,11 +25,7 @@ class Stock extends React.Component {
         feePercent: this.state.feePercent,
         buyAmount: this.state.buyAmount,
         sellAmount: this.state.sellAmount
-      })
-    } catch (e) {
-      res.status(500).json({ error: e.message });
-    }
-
+    })
     this.props.history.push('/portfolio')
   }
   render() { 
