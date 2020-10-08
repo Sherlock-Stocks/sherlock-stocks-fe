@@ -3,26 +3,24 @@ import { Link } from 'react-router-dom';
 
 
 class Header extends React.Component {
-  state = {  }
-  render() { 
+  state = {}
+  render() {
     return (
       <header>
-        <div>
-          <Link to='/'>
-            <h3>Sherlock Stocks</h3>
-          </Link>
-        </div>
-        <div>
+        <div className='header'>
           <Link to='signup'>
             <h3>Signup</h3>
           </Link>
           <Link to='login'>
             <h3>Login</h3>
           </Link>
+          <Link to='aboutus'>
+            <h3>About Us</h3>
+          </Link>
         </div>
       </header>
     );
   }
 }
- 
+
 export default Header;

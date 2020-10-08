@@ -1,17 +1,18 @@
 import React from 'react';
+import './App.css';
 
 class Home extends React.Component {
   state = {}
-  render() { 
+  render() {
     return (
       <div>
-        <h1>Sherlock Stocks</h1>
+        <h1 className='title'>Sherlock Stocks</h1>
         <p>
-          Invest, and make money.
+          We find the money.
         </p>
       </div>
     );
   }
 }
- 
+
 export default Home;
