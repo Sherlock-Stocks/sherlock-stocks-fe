@@ -9,6 +9,7 @@ import Signup from './Authorization/Signup.js';
 import Home from './Home.js';
 import Header from './Header.js';
 import Stock from './Stock/Stock.js';
+import Portfolio from './Details/Portfolio.js';
 import AboutUs from './AboutUs/Aboutus.js';
 
 export default class App extends Component {
@@ -37,6 +38,11 @@ export default class App extends Component {
                             path="/stock"
                             exact
                             render={(routerProps) => <Stock {...routerProps} />}
+                        />
+                        <Route
+                            path="/portfolio"
+                            exact
+                            render={(routerProps) => <Portfolio {...routerProps} />}
                         />
                         <Route
                             path="/aboutus"

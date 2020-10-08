@@ -12,7 +12,7 @@ export function login(userData) {
 
 export function getPortfolio() {
   try {
-    return request.get(`${URL}/api/v1/auth/verify`);
+    return request.get(`${URL}/api/v1/auth/verify`).withCredentials();
   } catch (e) {
     return { error: e.message }
   }

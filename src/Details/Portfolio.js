@@ -6,19 +6,21 @@ class Portfolio extends React.Component {
     portfolio: []
   }
 
-  componentDidMount = async() => {
+  componentDidMount = async () => {
     const portfolio = await getPortfolio();
+    console.log(portfolio);
 
     this.setState({
       portfolio: portfolio.body
     })
   }
-  render() { 
+
+  render() {
     return (
       <div>
         <h2>Portfolio</h2>
         <div>
-          <button onClick={this.props.history.push('/newstock')}></button>
+          <button></button>
         </div>
         <ul>
           {
@@ -46,5 +48,5 @@ class Portfolio extends React.Component {
     );
   }
 }
- 
+
 export default Portfolio;

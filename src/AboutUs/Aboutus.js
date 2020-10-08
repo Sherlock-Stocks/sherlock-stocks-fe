@@ -20,7 +20,7 @@ class About extends React.Component {
         </div>
         <div className='tile'>
           <h2>Heather Peterson</h2>
-          <p>I am a full-stack developer. In my free time, I enjoy the outdoors backpacking, rock climbing, and kayaking.</p>
+          <p>I am a full-stack developer, and with this application, we've tried to make trading stocks easy and accessible for everyone. In my free time, I enjoy backpacking, rock climbing, and kayaking.</p>
         </div>
       </div>
     );
