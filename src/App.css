@@ -104,6 +104,7 @@ p {
   border: solid 5px #85bb65;
   margin-left: 25%;
   margin-right: 25%;
+  box-shadow: 0 3px 10px rgba(57, 63, 72, 0.3);
 }
 
 label {
@@ -155,6 +156,7 @@ li {
   border: solid 5px #85bb65;
   text-align: center;
   justify-self: center;
+  box-shadow: 0 3px 10px rgba(57, 63, 72, 0.3);
 }
 
 .port-h4 {
