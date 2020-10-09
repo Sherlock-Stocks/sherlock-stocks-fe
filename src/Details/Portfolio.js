@@ -38,6 +38,8 @@ class Portfolio extends React.Component {
                 <p>{stock.feePercent}</p>
                 <h4>Buy Amount</h4>
                 <p>{stock.buyAmount}</p>
+                <h4>Sell Amount</h4>
+                <p>{stock.sellAmount}</p>
                 <h4>Result</h4>
                 <p>{stock.result}</p>
               </li>
