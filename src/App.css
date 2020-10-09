@@ -51,7 +51,13 @@ position: sticky;
 
 .title {
   display: flex;
+  width: 100%;
   justify-content: center;
+  text-align: center;
+  font-size: 75px;
+  padding-top: 50px;
+  color: whitesmoke;
+  -webkit-text-stroke: .5px black;
 }
 
 h2 {
@@ -63,6 +69,16 @@ h2 {
   margin-right: auto;
 }
 
+.home-p {
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 55px;
+  font-weight: 500;
+  padding-bottom: 50px;
+  -webkit-text-stroke: .5px black;
+}
+
 p {
   display: flex;
   justify-content: center;
@@ -70,14 +86,24 @@ p {
 }
 
 .home {
+  display: grid;
+  grid-auto-rows: auto;
+  height: 95vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
   margin-right: auto;
   margin-left: auto;
+  background-image: url('/Photos/gilly-wcWN29NufMQ-unsplash.jpg');
 }
 
 .form {
   display: grid;
   justify-content: center;
   align-items: center;
+  border: solid 5px #85bb65;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 label {
@@ -117,4 +143,20 @@ img {
   width: auto;
   border-radius: 50%;
   justify-self: center;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  list-style: none;
+}
+
+li {
+  border: solid 5px #85bb65;
+  text-align: center;
+  justify-self: center;
+}
+
+.port-h4 {
+  font-size: 18px;
 }

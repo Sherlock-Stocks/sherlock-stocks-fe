@@ -7,7 +7,7 @@ class Home extends React.Component {
     return (
       <div className='home'>
         <h1 className='title'>Sherlock Stocks</h1>
-        <p>
+        <p className='home-p'>
           We find the money.
         </p>
       </div>
