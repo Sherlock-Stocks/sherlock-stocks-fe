@@ -3,11 +3,11 @@ import { insertStock } from '../sherlock-api';
 
 class Stock extends React.Component {
   state = {
-    stockId: '',
     ticker: '',
     startingAmount: '',
     startDate: '',
     endDate: '',
+    frequency: '1day',
     feePercent: '',
     buyAmount: '',
     sellAmount: ''
@@ -22,6 +22,7 @@ class Stock extends React.Component {
       startingAmount: this.state.startingAmount,
       startDate: this.state.startDate,
       endDate: this.state.endDate,
+      frequency: this.state.frequency,
       feePercent: this.state.feePercent,
       buyAmount: this.state.buyAmount,
       sellAmount: this.state.sellAmount
@@ -32,7 +33,7 @@ class Stock extends React.Component {
     return (
       <div className='stock'>
         <h1>New Stock</h1>
-        <form>
+        <form onSubmit={this.handleNewStock}>
           <label>
             <h3>Ticker Symbol</h3>
             <input onChange={e => this.setState({ ticker: e.target.value })} value={this.state.ticker} />
