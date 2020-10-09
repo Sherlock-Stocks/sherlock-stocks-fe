@@ -11,7 +11,7 @@ class Portfolio extends React.Component {
     console.log(portfolio);
 
     this.setState({
-      portfolio: portfolio.body
+      portfolio: portfolio.body.portfolio
     })
   }
 

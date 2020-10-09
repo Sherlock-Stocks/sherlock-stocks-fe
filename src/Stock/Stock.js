@@ -3,11 +3,11 @@ import { insertStock } from '../sherlock-api';
 
 class Stock extends React.Component {
   state = {
-    stockId: '',
     ticker: '',
     startingAmount: '',
     startDate: '',
     endDate: '',
+    frequency: '1day',
     feePercent: '',
     buyAmount: '',
     sellAmount: ''
@@ -17,14 +17,14 @@ class Stock extends React.Component {
     e.preventDefault();
 
     await insertStock({
-        stockId: this.state.stockId,
-        ticker: this.state.ticker,
-        startingAmount: this.state.startingAmount,
-        startDate: this.state.startDate,
-        endDate: this.state.endDate,
-        feePercent: this.state.feePercent,
-        buyAmount: this.state.buyAmount,
-        sellAmount: this.state.sellAmount
+      ticker: this.state.ticker,
+      startingAmount: this.state.startingAmount,
+      startDate: this.state.startDate,
+      endDate: this.state.endDate,
+      frequency: this.state.frequency,
+      feePercent: this.state.feePercent,
+      buyAmount: this.state.buyAmount,
+      sellAmount: this.state.sellAmount
     })
     this.props.history.push('/portfolio')
   }
@@ -32,7 +32,7 @@ class Stock extends React.Component {
     return (
       <div>
         <h1>New Stock</h1>
-        <form>
+        <form onSubmit={this.handleNewStock}>
           <label>
             <h3>Ticker Symbol</h3>
             <input onChange={e => this.setState({ ticker: e.target.value })} value={this.state.ticker} />
