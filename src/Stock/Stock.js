@@ -27,7 +27,7 @@ class Stock extends React.Component {
       buyAmount: this.state.buyAmount,
       sellAmount: this.state.sellAmount
     })
-    this.props.history.location('/portfolio')
+    this.props.history.push('portfolio')
   }
   render() {
     return (
