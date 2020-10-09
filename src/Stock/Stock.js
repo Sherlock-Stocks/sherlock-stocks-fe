@@ -13,24 +13,24 @@ class Stock extends React.Component {
     sellAmount: ''
   }
 
-  handleNewStock = async(e) => {
+  handleNewStock = async (e) => {
     e.preventDefault();
 
     await insertStock({
-        stockId: this.state.stockId,
-        ticker: this.state.ticker,
-        startingAmount: this.state.startingAmount,
-        startDate: this.state.startDate,
-        endDate: this.state.endDate,
-        feePercent: this.state.feePercent,
-        buyAmount: this.state.buyAmount,
-        sellAmount: this.state.sellAmount
+      stockId: this.state.stockId,
+      ticker: this.state.ticker,
+      startingAmount: this.state.startingAmount,
+      startDate: this.state.startDate,
+      endDate: this.state.endDate,
+      feePercent: this.state.feePercent,
+      buyAmount: this.state.buyAmount,
+      sellAmount: this.state.sellAmount
     })
-    this.props.history.push('/portfolio')
+    this.props.history.location('/portfolio')
   }
-  render() { 
+  render() {
     return (
-      <div>
+      <div className='stock'>
         <h1>New Stock</h1>
         <form>
           <label>
@@ -69,5 +69,5 @@ class Stock extends React.Component {
     );
   }
 }
- 
+
 export default Stock;

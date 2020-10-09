@@ -11,7 +11,7 @@ class Portfolio extends React.Component {
     console.log(portfolio);
 
     this.setState({
-      portfolio: portfolio.body
+      portfolio: portfolio.body.portfolio
     })
   }
 
@@ -20,7 +20,7 @@ class Portfolio extends React.Component {
       <div>
         <h2>Portfolio</h2>
         <div>
-          <button></button>
+          <button className='portfolio-button' onClick={() => this.props.history.replace('/stock')}>Add Stock</button>
         </div>
         <ul>
           {
